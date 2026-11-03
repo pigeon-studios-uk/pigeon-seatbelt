@@ -1,0 +1,18 @@
+# The shared checks (version, CHANGELOG, Lua syntax, README links, secrets) and release jobs:
+# https://gitlab.com/pigeon-studios/tools/ci-templates
+include:
+  - project: pigeon-studios/tools/ci-templates
+    ref: v1.4.1
+    file:
+      - templates/checks.yml
+      - templates/release.yml
+
+# free: once a tag passes and its GitHub release is out, publish to the registry and GitHub Discussions.
+variables:
+  PS_RELEASE_KIND: free
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_TAG
