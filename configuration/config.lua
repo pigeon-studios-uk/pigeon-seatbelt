@@ -1,7 +1,8 @@
 Config = {}
 
--- Language file from locales/ to use, such as 'en'.
-Config.Locale = 'en'
+-- Language for the text players see. 'auto' follows ox_lib's language (setr ox:locale "de" in
+-- server.cfg) and is English when that isn't set. Or name a file from locales/, such as 'de' or 'pt-br'.
+Config.Locale = 'auto'
 
 ---------------------------------------------------------------------------
 -- Buckling up

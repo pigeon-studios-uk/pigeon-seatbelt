@@ -18,7 +18,9 @@ local DAZED_WALK = 'move_m@drunk@slightlydrunk'
 local BLUR = 'CarDamageHit'
 local SHAKE = 'jolt_SHAKE'
 
-local strings = Locales[Config.Locale] or Locales.en
+-- 'auto' follows ox_lib's language (the ox:locale convar), and English when that isn't set.
+local locale = Config.Locale == 'auto' and GetConvar('ox:locale', 'en') or Config.Locale
+local strings = Locales[locale] or Locales.en
 local prepared = Seatbelt.prepare(Config, joaat)
 
 local buckled = false

@@ -1,7 +1,7 @@
 --[[
     Pigeon Seatbelt: English.
 
-    To translate, copy this file to a new one named with the language's two-letter code (such as de.lua),
+    To translate, copy this file to a new one named with the language's code (such as de.lua or pt-br.lua),
     change `Locales.en` to match (Locales.de), translate the text in quotes, and set Config.Locale.
 ]]
 
