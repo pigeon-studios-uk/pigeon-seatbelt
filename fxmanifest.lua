@@ -5,7 +5,7 @@ lua54 'yes'
 name 'pigeon-seatbelt'
 author 'Pigeon Studios'
 description 'Buckle up with a key, or go through the windscreen in a crash, with a warning light and a chime.'
-version '1.0.0'
+version '1.1.0'
 repository 'https://github.com/pigeon-studios-uk/pigeon-seatbelt'
 
 -- Pigeon Studios version registry entry, read by server/version_check.lua.
